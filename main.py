@@ -20,7 +20,7 @@ with st.sidebar:
     st.header("⚙️ Model Configuration ")
     selected_model = st.selectbox(
         "Choose Model",
-        ["deepseek-r1: 7b"],
+        ["deepseek-r1:1.5b"],
         index = 0
     )
 
@@ -57,7 +57,7 @@ def build_prompt_chain():
 llm_engine = ChatOllama(model = selected_model,
                         base_url = "http://localhost:11434",
                         temperature = 0.3)
-system_prompt = SystemMessagePromptTemplate.from_templete(
+system_prompt = SystemMessagePromptTemplate.from_template(
     "You are an expert AI coding assistant. Provide consise, correct sollutions"
     "with strategic print statements for drbugging. Always response in English."
 )
@@ -67,7 +67,7 @@ if "message_log" not in st.session_state:
     st.session_state.message_log = [{"role": "ai", "content": "Hi! I'm DeepSeek. How can I help you code today?"}]  
 
 # Chat container
-chat_container = st.conatiner()
+chat_container = st.container()
 
 # Display chat messages
 with chat_container:
