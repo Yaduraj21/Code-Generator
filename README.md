@@ -68,12 +68,6 @@ http://localhost:8501
 - Conversation history
 - Markdown support for formatted responses
 
-### Styling
-- Custom CSS for modern look
-- Responsive design
-- Dark mode support for code blocks
-- Clean and intuitive UI
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
